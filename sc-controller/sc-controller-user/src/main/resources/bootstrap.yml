@@ -1,0 +1,15 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: user-controller
+# 配置eureka的安全中心
+  security:
+    user:
+      name: 123qwe2
+      password: 123qwe
+eureka:
+  client:
+    serviceUrl:
+      defaultZone:
+      http://${spring.security.user.name}:${spring.security.user.password}@${eureka.instance.hostname}:${server.port}/eureka/
