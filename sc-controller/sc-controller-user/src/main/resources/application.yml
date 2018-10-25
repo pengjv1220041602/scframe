@@ -6,10 +6,9 @@ spring:
 # 配置eureka的安全中心
   security:
     user:
-      name: 123qwe2
+      name: 123qwe
       password: 123qwe
 eureka:
   client:
     serviceUrl:
-      defaultZone:
-      http://${spring.security.user.name}:${spring.security.user.password}@${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@127.0.0.1:9000/eureka/
